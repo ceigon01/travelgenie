@@ -1,0 +1,206 @@
+<!--first step-->
+<div id="customize">
+    <div class="coverhead" style="background-image: url('images/back2.jpg')"></div>
+    <div class="md-modal md-effect-12" id="modal-registryItems">
+        <div class="md-content">
+            <h3>Select Items that you would like to add to your registry</h3>
+            <hr/>
+            <div id="reg-items"></div>
+            <div>
+                <button  style="margin-top:40px;margin-left: -13px;" class="md-close rbButton dark large btn-block">Done</button>
+            </div>
+        </div>
+    </div>
+    <div class="md-overlay"></div>
+    <div class="shell signup">
+        <h1>Customize your Registry</h1>
+        <p class="lead text-muted">Please enter your information as accurately as possible</p>
+        <div role="tabpanel">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#layout" aria-controls="layout" role="tab" data-toggle="tab">Layout & Design</a></li>
+                <li role="presentation"><a href="#details" aria-controls="details" role="tab" data-toggle="tab">Registry Details</a></li>
+                <div class="pull-right"><button class="btn btn-default">Preview</button> <button class="btn btn-primary">Done</button> </div>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="layout">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 canvas">
+                                <img src="images/profile-layout-lt.png"/>
+                            </div>
+                            <div class="col-md-6 canvas settings">
+                                <h4 class="lead">Customize cover photo</h4>
+                                <div class="inline-form">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="photoUrl">Photo URL</label>
+                                        <input type="photoUrl" class="form-control" id="photoUrl" placeholder="Enter a photo URL" style="width: 90%;"> <button type="button" class="btn btn-default"><i class="fa fa-plus "></i> </button>
+                                        <button type="button" class="btn btn-default btn-block"><i class="fa fa-plus "></i> Upload Photo</button>
+                                    </div>
+                                </div>
+                                <hr/>
+                                <h4 class="lead">Profile photo</h4>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="photo-preview-pane"></div>
+                                    </div>
+                                    <div class="col-md-8" style="padding-top:12px">
+                                        <button type="button" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i> Import from Facebook</button>
+                                        <button type="button" class="btn btn-default btn-block"><i class="fa fa-plus "></i> Upload Photo</button>
+                                    </div>
+                                </div>
+                                <hr/>
+                                <h4 class="lead">Select Registry Color Scheme</h4>
+                                <div class="row">
+                                    <div class="col-md-4" style="padding-left:0px">Primary</div>
+                                    <div class="col-md-4" style="padding-left:0px">Secondary</div>
+                                    <div class="col-md-4" style="padding-left:0px">Tertiary</div>
+                                </div>
+                                <div class="inline-form">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="photoUrl">Primary Color</label>
+                                        <div class="bfh-colorpicker" data-name="primary-color"></div>
+                                        <div class="bfh-colorpicker" data-name="secondary-color"></div>
+                                        <div class="bfh-colorpicker" data-name="tertiary-color"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="radio" class="input-registry-palette sr-only" name="layout_setting[palette]" id="Colet" value="C1">
+                                        <label for="Colet" class="palette-preview-label">
+                                            <div class="palette-preview center-block text-center">
+                                                <span class="palette-single-color" style="background-color:#f5989d" data-color-input-id="registry-primary-color" data-color="#f5989d"></span>
+                                                <span class="palette-single-color" style="background-color:#45778f" data-color-input-id="registry-secondary-color" data-color="#45778f"></span>
+                                                <span class="palette-single-color" style="background-color:#eaedf1" data-color-input-id="registry-tertiary-color" data-color="#eaedf1"></span>
+                                            </div>
+                                            <span class="palette-name center-block text-center">Colet</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="radio" class="input-registry-palette sr-only" name="layout_setting[palette]" id="Mesa" value="C2">
+                                        <label for="Mesa" class="palette-preview-label">
+                                            <div class="palette-preview center-block text-center">
+                                                <span class="palette-single-color" style="background-color:#da4274" data-color-input-id="registry-primary-color" data-color="#da4274"></span>
+                                                <span class="palette-single-color" style="background-color:#8781bd" data-color-input-id="registry-secondary-color" data-color="#8781bd"></span>
+                                                <span class="palette-single-color" style="background-color:#efeef8" data-color-input-id="registry-tertiary-color" data-color="#efeef8"></span>
+                                            </div>
+                                            <span class="palette-name center-block text-center">Mesa</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="radio" class="input-registry-palette sr-only" name="layout_setting[palette]" id="Dahl" value="C3">
+                                        <label for="Dahl" class="palette-preview-label">
+                                            <div class="palette-preview center-block text-center">
+                                                <span class="palette-single-color" style="background-color:#0b6760" data-color-input-id="registry-primary-color" data-color="#0b6760"></span>
+                                                <span class="palette-single-color" style="background-color:#9cc9c7" data-color-input-id="registry-secondary-color" data-color="#9cc9c7"></span>
+                                                <span class="palette-single-color" style="background-color:#ebf4f4" data-color-input-id="registry-tertiary-color" data-color="#ebf4f4"></span>
+                                            </div>
+                                            <span class="palette-name center-block text-center">Dahl</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="radio" class="input-registry-palette sr-only" name="layout_setting[palette]" id="Elin" value="C4">
+                                        <label for="Elin" class="palette-preview-label">
+                                            <div class="palette-preview center-block text-center">
+                                                <span class="palette-single-color" style="background-color:#60c5bc" data-color-input-id="registry-primary-color" data-color="#60c5bc"></span>
+                                                <span class="palette-single-color" style="background-color:#97a6b9" data-color-input-id="registry-secondary-color" data-color="#97a6b9"></span>
+                                                <span class="palette-single-color" style="background-color:#eaedf1" data-color-input-id="registry-tertiary-color" data-color="#eaedf1"></span>
+                                            </div>
+                                            <span class="palette-name center-block text-center">Elin</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="radio" class="input-registry-palette sr-only" name="layout_setting[palette]" id="Rosa" value="C5">
+                                        <label for="Rosa" class="palette-preview-label">
+                                            <div class="palette-preview center-block text-center">
+                                                <span class="palette-single-color" style="background-color:#ec836d" data-color-input-id="registry-primary-color" data-color="#ec836d"></span>
+                                                <span class="palette-single-color" style="background-color:#f1c380" data-color-input-id="registry-secondary-color" data-color="#f1c380"></span>
+                                                <span class="palette-single-color" style="background-color:#fcf2e8" data-color-input-id="registry-tertiary-color" data-color="#fcf2e8"></span>
+                                            </div>
+                                            <span class="palette-name center-block text-center">Rosa</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="radio" class="input-registry-palette sr-only" name="layout_setting[palette]" id="Vega" value="C6">
+                                        <label for="Vega" class="palette-preview-label">
+                                            <div class="palette-preview center-block text-center">
+                                                <span class="palette-single-color" style="background-color:#f19631" data-color-input-id="registry-primary-color" data-color="#f19631"></span>
+                                                <span class="palette-single-color" style="background-color:#9e0039" data-color-input-id="registry-secondary-color" data-color="#9e0039"></span>
+                                                <span class="palette-single-color" style="background-color:#faf2f4" data-color-input-id="registry-tertiary-color" data-color="#faf2f4"></span>
+                                            </div>
+                                            <span class="palette-name center-block text-center">Vega</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <hr/>
+                                <h4 class="lead">Select Font</h4>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <input type="radio" class="input-registry-font-pair sr-only" name="layout_setting[font]" id="f1" value="f1">
+                                        <label for="f1" class="font-pair-label">
+                                            <div class="font-pair-preview">
+                                                <div class="single-font-preview-primary single-font-preview-playfair-display"></div>
+                                                <div class="single-font-preview-secondary single-font-preview-lato"></div>
+                                            </div>
+                                            <span class="sr-only">Open Sans and Volkhov</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <input type="radio" class="input-registry-font-pair sr-only" name="layout_setting[font]" id="f2" value="f2">
+                                        <label for="f2" class="font-pair-label">
+                                            <div class="font-pair-preview">
+                                                <div class="single-font-preview-primary single-font-preview-oswald"></div>
+                                                <div class="single-font-preview-secondary single-font-preview-open-sans"></div>
+                                            </div>
+                                            <span class="sr-only">Open Sans and Volkhov</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <input type="radio" class="input-registry-font-pair sr-only" name="layout_setting[font]" id="f3" value="f3">
+                                        <label for="f3" class="font-pair-label">
+                                            <div class="font-pair-preview">
+                                                <div class="single-font-preview-primary single-font-preview-raleway"></div>
+                                                <div class="single-font-preview-secondary single-font-preview-gentium-book-basic"></div>
+                                            </div>
+                                            <span class="sr-only">Open Sans and Volkhov</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <input type="radio" class="input-registry-font-pair sr-only" name="layout_setting[font]" id="f4" value="f4">
+                                        <label for="f4" class="font-pair-label">
+                                            <div class="font-pair-preview">
+                                                <div class="single-font-preview-primary single-font-preview-old-standard-tt"></div>
+                                                <div class="single-font-preview-secondary single-font-preview-gentium-book-basic"></div>
+                                            </div>
+                                            <span class="sr-only">Open Sans and Volkhov</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="details">
+                    <form id="regDetailsFrm" name="regDetailsFrm" action="" class="signup">
+                        <label class="lead text-muted" style="margin-bottom: 10px">Whats the occasion?</label>
+                        <input type="text" id="occasion" name="occasion" placeholder="Marriage, Divorce party, Need a vacation, etc"/>
+                        <label class="lead text-muted" style="margin-bottom: 10px">Where would you like to go?</label>
+                        <input type="text" id="destination" name="destination" data-role="tagsinput" placeholder="Enter a destination" />
+                        <label class="lead text-muted" style="margin-bottom: 10px">What is your funding goal?</label>
+                        <input type="text" id="goal" name="goal" placeholder="$5,000,000,000 - Would be nice :)"/>
+                        <label class="lead text-muted" style="margin-bottom: 10px">When would you like the registry to end?</label>
+                        <div class="bfh-datepicker" id="endDate" data-name="endDate" data-placeholder="When would you like the registry to end?" style="margin-bottom:10px"></div>
+                        <label class="lead text-muted" style="margin-bottom: 10px">Share your story and why you need this registy</label>
+                        <textarea id="wish" name="wish" placeholder="What are you going to wish for?"></textarea>
+                        <p class="lead text-muted">Your info is safe, never shared</p>
+                        <div><button id="go-reg-items-btn" class="rbButton dark large btn-block">Continue</button></div>
+                        <div class="signup-info"><a href="#">Already a member?</a></div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<!--first step-->
+<div id="signup">
+    <div class="coverhead" style="background-image: url('images/back2.jpg')"></div>
+    <div class="md-modal md-effect-12" id="modal-registryItems">
+        <div class="md-content">
+            <h3>Select Items that you would like to add to your registry</h3>
+            <hr/>
+            <div id="reg-items"></div>
+            <div>
+                <button  style="margin-top:40px;margin-left: -13px;" class="md-close rbButton dark large btn-block">Done</button>
+            </div>
+        </div>
+    </div>
+    <div class="md-overlay"></div>
+    <div class="shell signup">
+        <h1>Create Your Registry</h1>
+        <p class="lead text-muted">Please enter your information as accurately as possible</p>
+        <button id="facebookBtn" type="button" class="rbButton facebook large  btn-block">Use Facebook</button>
+        <hr/>
+        <div class="or"><div>or</div></div>
+        <form id="signupFrm" name="signupFrm" action="" class="signup">
+            <input type="text" id="fullName" name="fullName" placeholder="Full Name"/>
+            <input type="text" id="email" name="email" placeholder="Contact E-mail"/>
+            <input type="text" id="phone" name="phone" placeholder="Mobile Phone"/>
+            <input type="password" id="password" name="password" placeholder="password"/>
+            <input type="password" id="verifyPassword" name="verifyPassword" placeholder="Verify password"/>
+            <label class="lead text-muted" style="margin-bottom: 10px">How did you hear about us?</label>
+            <select class="selectpicker" id="referredBy" name="referredBy[]" data-width="100%" multiple>
+                <option value="Internet">Internet</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Website">Website</option>
+                <option value="Magazine">Magazine</option>
+                <option value="Commercial">Commercial</option>
+                <option value="From a friend">From a friend</option>
+            </select>
+            <p class="lead text-muted">Your info is safe, never shared</p>
+            <div><button class="rbButton dark large btn-block">Continue</button></div>
+            <div class="signup-info"><a href="#">Already a member?</a></div>
+        </form>
+    </div>
+</div>
+<!--second step-->
+<div id="activate">
+    <div class="coverhead" style="background-image: url('images/back2.jpg')"></div>
+    <div class="shell signup">
+        <h1>Activate your account</h1>
+        <p class="lead text-muted">Please enter your information as accurately as possible</p>
+        <hr/>
+        <form id="activateFrm" name="activateFrm" action="">
+            <input type="text" id="username" name="fullName" placeholder="Username"/>
+            <input type="text" id="password" name="password" placeholder="Password"/>
+            <input type="text" id="key" name="password" placeholder="enter your key"/>
+            <div><button class="rbButton dark large btn-block">Activate Account</button></div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,97 @@
+<section id="registryItems">
+    <div  class="tone cfour">
+        <ul id="items" class="clearfix" >
+        {{#items}}
+                <li class="item wp-theme">
+                    <a href="#" class="clearfix">
+                        <img width="460" height="345" src="{{attributes.mediaItem.attributes.file._url}}" alt="Starbucks Coffee"/>
+                        <div class="caption">
+                            <h3>{{attributes.caption}}</h3>
+                            <span>{{attributes.description}}</span>
+                            <a href="add-item?id={{id}}" class="rbButton btn dark btn-inline">Add to Registry</a>
+                        </div>
+                    </a>
+                </li>
+        {{/items}}
+        {{^items}}
+        <li>No registry items at the moment. Please try again.</li>
+        {{/items}}
+        </ul>
+    </div>
+</section>
+<section id="registryItemList">
+    <div class="coverhead" style="background-image: url('images/back2.jpg')"></div>
+    <div class="md-modal md-effect-12" id="modal-registryItems">
+        <div class="md-content">
+            <h3>Select Items that you would like to add to your registry</h3>
+            <hr/>
+            <div id="reg-items"></div>
+            <div>
+                <button  style="margin-top:40px" class="md-close rbButton dark large btn-block">Done</button>
+            </div>
+        </div>
+    </div>
+    <div class="md-modal md-effect-12" id="modal-editPhoto">
+        <div class="md-content">
+            <h3>Add a photo to your registry item</h3>
+            <div id="drag-and-drop-zone" class="uploader">
+                <div class="instructions">Drag &amp; Drop Images Here</div>
+                <div class="or">-or-</div>
+                <div class="load-status" >
+                    <input type="text" value="0" class="dial">
+                    <div class="status-label"></div>
+                </div>
+                <div class="browser">
+                    <label>
+                        <span>Click to open the file Browser</span>
+                        <input type="file" name="files[]" multiple="multiple" title='Click to add Files'>
+                    </label>
+                </div>
+            </div>
+            <div id="demo-files"></div>
+            <div id="demo-debug"></div>
+            <div>
+                <button  style="margin-top:40px" class="md-close rbButton dark large btn-block">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="md-overlay"></div>
+    <div class="shell regitems">
+        <div class="row header" style="padding-left:0px">
+            <div class="pull-left"><h1>Registry Items</h1></div>
+            <div class="pull-right"><button type="button" class="rbButton btn dark btn-inline md-trigger"  data-modal="modal-registryItems">Add Item</button> </div>
+        </div>
+        {{#items}}
+        <div class="row alternate" >
+            <div class="col-xs-12 col-md-10" style="padding-left:0px">
+                <div class="row" data-item="{{id}}">
+                    <div class="col-xs-6 col-md-4" style="padding-left: 0px;"><a class="upload md-trigger" href="#" data-modal="modal-editPhoto"><img data-item="{{id}}" data-media-item="{{attributes.mediaItem.id}}" class="img-thumbnail" onError="this.src='{{attributes.mediaItem.attributes.file._url}}';" src="{{attributes.mediaItem.attributes.external}}" ></a>
+                        <div class="img-thumbnail-caption text-muted">Click photo to edit</div>
+                    </div>
+                    <div class="col-xs-12 col-md-8">
+                        <input name="location" type="text" placeholder="{{attributes.registryItem.attributes.caption}}" data-item="{{id}}" value="{{attributes.caption}}"/>
+                        <textarea name="description" placeholder="{{attributes.registryItem.attributes.description}}"  data-item="{{id}}">{{attributes.description}}</textarea>
+                        <div class="price-container">
+                            <div class="input-group">
+                                <div class="input-group-addon">$</div>
+                                <input type="text" class="form-control" name="amount" id="amount" placeholder="Amount" data-item="{{id}}" value="{{attributes.monetaryValue}}">
+                                <div class="input-group-addon">.00</div>
+                            </div>
+                        </div>
+                        <div class="qty-container"><input name="qty" placeholder="Quantity Needed" class="form-control bfh-number" data-item="{{id}}" value="{{attributes.minQty}}"></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-2 text-right ">
+                <a href="delete-item?id={{id}}" class="btn btn-link"><i class="fa fa-times-circle fa-3x"></i></a>
+            </div>
+        </div>
+        {{/items}}
+        {{^items}}
+        <div class="row empty">No registry items at the moment. Select the add button to add some to your registry.</div>
+        {{/items}}
+    </div>
+    <div class="row"><button id="regitems-continue" class="rbButton dark large btn-block">Continue</button></div>
+</section>
